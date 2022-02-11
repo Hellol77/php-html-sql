@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+      div {
+        border-radius: 30px;
+        padding: 1%;
+        font-size: 30px;
+        font-weight: 600;
+        position: absolute;
+        transition: transform 1s;
+      }
+      div:hover {
+        transform: rotate(180deg);
+      }
+      @keyframes wwwAnimation {
+        50% {
+          left: 40%;
+          font-size: 100px;
+        }
+        100% {
+          left: 2%;
+          font-size: 30px;
+        }
+      }
+      @keyframes javascriptAnimation {
+        50% {
+          bottom: 40%;
+          font-size: 100px;
+        }
+        100% {
+          bottom: 2%;
+          font-size: 30px;
+        }
+      }
+      @keyframes html5Animation {
+        50% {
+          top: 40%;
+          font-size: 100px;
+        }
+        100% {
+          top: 2%;
+          font-size: 30px;
+        }
+      }
+      @keyframes css3Animation {
+        50% {
+          right: 40%;
+          font-size: 100px;
+        }
+        100% {
+          right: 2%;
+          font-size: 30px;
+        }
+      }
+      .WWW {
+        background-color: black;
+        color: white;
+        top: 2%;
+        left: 2%;
+        z-index: 1;
+        animation-name: wwwAnimation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        transition: transform 1s;
+      }
+      .JavaScript {
+        background-color: blue;
+        color: white;
+        left: 2%;
+        bottom: 2%;
+        z-index: 4;
+        animation-name: javascriptAnimation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+      .CSS3 {
+        background-color: green;
+        color: white;
+        bottom: 2%;
+        right: 2%;
+        z-index: 3;
+        animation-name: css3Animation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+      .HTML5 {
+        background-color: red;
+        color: white;
+        top: 2%;
+        right: 2%;
+        z-index: 2;
+        animation-name: html5Animation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="WWW">WWW</div>
+    <div class="HTML5">HTML5</div>
+    <div class="JavaScript">JavaScript</div>
+    <div class="CSS3">CSS3</div>
+  </body>
+</html>

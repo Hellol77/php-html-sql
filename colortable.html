@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        height: 125px;
+        width: 250px;
+        text-align: center;
+        border: 2px solid;
+        background-color: yellow;
+        text-align: right;
+      }
+      input[type="number"] {
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <td id="1-1">1-1</td>
+        <td id="1-2">1-2</td>
+        <td id="1-3">1-3</td>
+        <td id="1-4">1-4</td>
+        <td id="1-5">1-5</td>
+      </tr>
+      <tr>
+        <td id="2-1">2-1</td>
+        <td id="2-2">2-2</td>
+        <td id="2-3">2-3</td>
+        <td id="2-4">2-4</td>
+        <td id="2-5">2-5</td>
+      </tr>
+      <tr>
+        <td id="3-1">3-1</td>
+        <td id="3-2">3-2</td>
+        <td id="3-3">3-3</td>
+        <td id="3-4">3-4</td>
+        <td id="3-5">3-5</td>
+      </tr>
+    </table>
+    <br />
+    <form>
+      <span>세로</span><input id="row" type="number" value="1" min="1" max="3"/><br />
+      <span>가로</span><input id="col" type="number" value="1" min="1" max="5" /><br />
+      <span>컬러</span><input id="color" type="text" value="red" /><br /><br />
+      <input type="button" value="컬러 적용" onclick="changeColor()" />
+    </form>
+    <script type="text/javascript">
+      function changeColor() {
+        var col = document.getElementById("col").value;
+        var row = document.getElementById("row").value;
+        var color = document.getElementById("color").value;
+        document.getElementById(row + "-" + col).style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>

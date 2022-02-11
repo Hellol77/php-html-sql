@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>reservation</title>
+  </head>
+  <body>
+    <header>
+      <h2><a href="main.html">Marvel Cinema</a></h2>
+      <nav>
+        <ul>
+          <li><a href="select.html">영화 예매</a></li>
+          <li><a href="intro.html">영화 소개</a></li>
+          <li><a href="reservation.html">예매 확인 및 취소</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="reservation_div">
+      <div class="reservation_div_main">
+        <div class="reservation_div_main_text">예매 내역</div>
+        <div class="reservation_div_main_subtext">
+          예매 내역을 클릭하면 상세내역을 볼 수 있습니다.
+        </div>
+        <div class="list_div">
+          <ul id="list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <footer>
+      <div class="footer_top">
+        질문이 있으신가요? 문의 전화 080-1234-5678<br />학번 : 201702218<br />이름
+        : 원동현<br />학과 : 수학과
+      </div>
+      <div class="footer_mid">
+        <img src="media/marvelfooter.png" alt="marvel" />
+      </div>
+    </footer>
+    <script type="text/javascript">
+      const list = document.getElementById("list");
+      var ls = window.localStorage;
+      for (var i = 0; i < ls.length; i++) {
+        const reservation_movie_time = ls.key(i);
+        const temp = ls.getItem(reservation_movie_time);
+        const reservation_movie = temp.split(",", 999);
+        const reservation_movie_seat = reservation_movie.slice(2);
+        const li = document.createElement("li");
+        li.id = list.id;
+        const span = document.createElement("span");
+        span.innerText = reservation_movie_time + reservation_movie[0];
+        span.addEventListener("click", (event) => {
+          alert(
+            "인원 : " +
+              reservation_movie[1] +
+              "명 입니다.  좌석 번호 : " +
+              reservation_movie_seat
+          );
+        });
+        const button = document.createElement("button");
+        button.addEventListener("click", (event) => {
+          const temp_li = event.target.parentElement;
+          li.remove();
+          ls.removeItem(reservation_movie_time);
+        });
+        button.innerText = "예매 취소";
+        li.appendChild(span);
+        li.appendChild(button);
+        list.appendChild(li);
+      }
+    </script>
+  </body>
+</html>

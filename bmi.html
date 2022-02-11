@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <script type="text/javascript">
+        var name = prompt("이름을 입력하세요...");
+        var height = prompt(name + "님의 키를 입력하세요...");
+        var weight = prompt(name + "님의 몸무게를 입력하세요...");
+        var bmi = (weight / ((height * height) / 10000)).toFixed(1);
+        document.write("<tr>");
+        document.write("<th>이름</th>");
+        document.write("<td>" + name + "</td>");
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<th>키</th>");
+        document.write("<td>" + height + "cm</td>");
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<th>몸무게</th>");
+        document.write("<td>" + weight + "kg</td>");
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<th>BMI</th>");
+        document.write("<td>" + bmi + "</td>");
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<th>비만도</th>");
+        if (bmi < 18.5) {
+          document.write("<td style='color:blue; font-size:2em;'>저체중</td>");
+          document.write("</tr>");
+        } else if (18.5 <= bmi & bmi< 25.0) {
+          document.write("<td style='color:black; font-size:2em;'>정상</td>");
+          document.write("</tr>");
+        } else if (25.0 <= bmi & bmi< 30.0) {
+          document.write("<td style='color:orange; font-size:2em;'>과체중</td>");
+          document.write("</tr>");
+        } else if (30 <= bmi) {
+          document.write("<td style='color:red; font-size:2em;'>비만</td>");
+          document.write("</tr>");
+        }
+      </script>
+    </table>
+  </body>
+</html>

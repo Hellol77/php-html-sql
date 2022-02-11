@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .base {
+        background-color: yellow;
+        display: inline-block;
+        width: 300px;
+        text-align: center;
+        padding-top: 20px;
+        height: 90px;
+        font-size: 25px;
+        border-radius: 10px;
+        margin: 5px;
+      }
+
+      span {
+        font-size: 25px;
+      }
+      #first,
+      #second,
+      #third {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="base" id="table1" onclick="toggleColor('table1','first');">
+      서시<br />윤동주
+    </div>
+    <div class="base" id="table2" onclick="toggleColor('table2','second');">
+      쉽게 쓰여진 시<br />윤동주
+    </div>
+    <div class="base" id="table3" onclick="toggleColor('table3','third');">
+      별 헤는 밤<br />윤동주
+    </div>
+    <div id="first">
+      <h1>서시, 윤동주</h1>
+      <span>
+        죽는 날까지 하늘을 우러러<br />
+        한 점 부끄럼이 없기를,<br />
+        잎새에 이는 바람에도<br />
+        나는 괴로워했다.<br />
+        별을 노래하는 마음으로<br />
+        모든 죽어가는 것을 사랑해야지.<br />
+        그리고 나한테 주어진 길을<br />
+        걸어가야겠다.
+      </span>
+    </div>
+    <div id="second">
+      <h1>쉽게 쓰여진 시, 윤동주</h1>
+      <span>
+        인생은 살기 어렵다는데<br />
+        시가 이렇게 쉽게 씌어지는 것은<br />
+        부끄러운 일이다<br />
+        육첩방은 남의 나라<br />
+        창밖에 밤비가 속살거리는데,<br />
+        등불을 밝혀 어둠을 조금 내몰고<br />
+        시대처럼 올 아침을 기다리는 최후의 나.
+      </span>
+    </div>
+    <div id="third">
+      <h1>별 헤는 밤, 윤동주</h1>
+      <span>
+        계절로 지나가는 하늘에는<br />
+        가을로 가득 차 있습니다.<br />
+        나는 아무 걱정도 없이<br />
+        가을 속의 별들을 다 헤일 듯 합니다.<br />
+        가슴속에 하나 둘 새겨지는 별을<br />
+        이제 다 못 헤는 것은<br />
+        쉬이 아침이 오는 까닭이요,<br />
+        내일 밤이 남은 까닭이요,<br />
+        아직 나의 청춘이 다 하지 않은 까닭입니다.
+      </span>
+    </div>
+    <script type="text/javascript">
+      function toggleColor(id, id2) {
+        var dom = document.getElementById(id);
+        var dom2 = document.getElementById(id2);
+        if (dom.style.background == "yellow") {
+          dom.style.background = "#6aeefc";
+          dom2.style.display = "block";
+        } else {
+          dom.style.background = "yellow";
+          dom2.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

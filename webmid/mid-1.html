@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        display: block;
+        width: 644px;
+        height: 264px;
+        border: 2px solid blue;
+      }
+      th {
+        text-align: center;
+        border: 1px solid red;
+        font-size: 20px;
+      }
+      td {
+        background-color: yellow;
+        text-align: center;
+        text-decoration: underline;
+        color: blue;
+        border: 2px solid red;
+        font-size: 12px;
+        width: 153px;
+        height: 220px;
+      }
+      td:hover {
+        background-color: aqua;
+      }
+      iframe {
+        width: 640px;
+        height: 480px;
+      }
+      img {
+        width: 120px;
+      }
+      img:hover {
+        transform: scale(1.5);
+        box-shadow: 10px 10px 5px grey;
+      }
+      div:hover {
+        font-size: 150%;
+        transform: rotate(-15deg);
+        size: 150%;
+        box-shadow: 10px 10px 5px grey;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th colspan="4">아트링크</th>
+      </tr>
+      <tr>
+        <td>
+          <a href="media/starry night.jpg" target="test"
+            ><div><img src="media/starry night.jpg" /></div>
+            <div>별이 빛나는 밤</div></a>
+        </td>
+        <td>
+          <a href="media/waterlilies.jpg" target="test">
+            <div><img src="media/waterlilies.jpg" alt="" /></div>
+            <div>수련</div></a>
+        </td>
+        <td>
+          <a href="https://www.youtube.com/embed/lPYxbbKYYmE" target="test">
+            <div><img src="media/minari.jpg" /></div>
+            <div>미나리</div></a>
+        </td>
+        <td>
+          <a href="https://www.hufs.ac.kr/" target="test">
+            <div><img src="media/hufs logo.jpg" /></div>
+            <div>한국외국어대학교</div></a>
+        </td>
+      </tr>
+    </table>
+    <iframe name="test"></iframe>
+  </body>
+</html>

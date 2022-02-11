@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        margin-bottom: 20px;
+      }
+      fieldset div {
+        display: inline-block;
+        margin: 2px;
+      }
+      input {
+        margin-bottom: 10px;
+      }
+      fieldset {
+        display: inline;
+      }
+      input[type="time"] {
+        width: 200px;
+        font-size: 30px;
+        background-color: aqua;
+        color: red;
+      }
+      .time:hover {
+        background-color: yellow;
+      }
+      .check {
+        transition: transform 0.5s;
+      }
+      .check:hover {
+        transform: scale(3);
+      }
+      .resetbutton {
+        background-color: rgb(221, 111, 111);
+        border: 2px solid black;
+      }
+      .button1 {
+        margin-left: 85px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend><h2>알람 설정</h2></legend>
+        <input type="time" value="06:00" class="time" />
+        <br />
+        <div>
+          <label><input type="checkbox" class="check" /><br />일</label>
+        </div>
+        <div>
+          <label><input type="checkbox" checked class="check" /><br />월</label>
+        </div>
+        <div>
+          <label><input type="checkbox" checked class="check" /><br />화</label>
+        </div>
+        <div>
+          <label><input type="checkbox" checked class="check" /><br />수</label>
+        </div>
+        <div>
+          <label><input type="checkbox" checked class="check" /><br />목</label>
+        </div>
+        <div>
+          <label><input type="checkbox" checked class="check" /><br />금</label>
+        </div>
+        <div>
+          <label><input type="checkbox" class="check" /><br />토</label>
+        </div>
+        <br />
+        <br />
+        <span>알람 사운드</span>
+        <select>
+          <option value="">Bell</option>
+          <option value="">Ding Dong</option>
+          <option value="">Beep</option>
+        </select>
+        <br />
+        <br />
+        <span>음량 0</span>
+        <input type="range" min="0" max="15" value="10" />
+        <span>15</span>
+      </fieldset>
+      <br />
+      <input type="reset" value="초기화" class="resetbutton" />
+      <input type="button" class="button1" value="등록" />
+      <input type="button" value="취소" />
+    </form>
+  </body>
+</html>
